@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<title>Missile Command!</title>
+				<style>
+					canvas {
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						background: transparent;
+					}
+					#background {
+						z-index: -2;
+					}
+					#missile {
+						z-index: -1;
+					}
+					#turret {
+						z-index: 0;
+					}
+				</style>
+		</head>
+		<body>
+				<!-- The canvas for the panning background -->
+				<canvas id="background" width="600" height="360">
+					Your browser does not support canvas.
+				</canvas>
+				<!-- The canvas for all missiles and rockets-->
+				<canvas id="missile" width="600" height="360"></canvas>
+				<!-- The canvas for the player turrets and cities -->
+				<canvas id="turret" width="600" height="360"></canvas>
+				<script src="missile_command.js"></script>
+
+		</body>
+
+</html>

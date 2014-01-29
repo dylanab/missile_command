@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
-		<head>
-				<title>Missile Command!</title>
-				<style>
-					canvas {
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						background: transparent;
-					}
-					#background {
-						z-index: -2;
-					}
-					#missile {
-						z-index: -1;
-					}
-					#turret {
-						z-index: 0;
-					}
-				</style>
-		</head>
-		<body>
-				<!-- The canvas for the panning background -->
-				<canvas id="background" width="600" height="360">
-					Your browser does not support canvas.
-				</canvas>
-				<!-- The canvas for all missiles and rockets-->
-				<canvas id="missile" width="600" height="360"></canvas>
-				<!-- The canvas for the player turrets and cities -->
-				<canvas id="turret" width="600" height="360"></canvas>
-				<script src="missile_command.js"></script>
 
-		</body>
+<head>
+	<title>Missile Command! </title>
 
+		<style>
+			canvas {
+				border: 3px solid black;
+				position: absolute;
+			}
+			#background {
+			  z-index: -3;
+			  background: lightblue;
+			}
+			#ground {
+				z-index: -2;
+				background: url('ground.png');
+			}
+			#cities {
+			  z-index: -1;
+			  background: transparent;
+			}
+			#main{
+			  z-index: 0;
+			  background: transparent;
+			}
+		</style>
+		<!--
+    	<style type="text/css">
+      		canvas { border: 3px solid black; }
+    		body { background-color: #666; }
+    		#canvas {background-color: #000;}
+    		#main {background-color: #000;}
+    	</style>
+		-->
+	<script src="test_missile_command.js"> </script>
+</head>
+
+<!-- HERE we add an explicit call to the draw() function -->
+<body onload="init()">
+<canvas id="main" width="700" height="630">
+Your browser does not support the canvas element.
+</canvas>
+<canvas id="cities" width="700" height="630"></canvas>
+<canvas id="ground" width="700" height="630"></canvas>
+<canvas id="background" width="700" height="630"></canvas>
+</body>
 </html>

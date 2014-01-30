@@ -10,35 +10,37 @@
 				position: absolute;
 			}
 			#background {
-			  z-index: -3;
+			  z-index: -5;
 			  background: lightblue;
 			}
 			#ground {
-				z-index: -2;
+				z-index: -4;
 				background: url('ground.png');
 			}
 			#cities {
-			  z-index: -1;
+			  z-index: -3;
 			  background: transparent;
 			}
 			#main{
-			  z-index: 0;
+			  z-index: -2;
 			  background: transparent;
 			}
+			#explosion {
+				z-index: -1;
+				background: transparent;
+			}
+			#text {
+				z-index: 0;
+				background: transparent;
+			}
 		</style>
-		<!--
-    	<style type="text/css">
-      		canvas { border: 3px solid black; }
-    		body { background-color: #666; }
-    		#canvas {background-color: #000;}
-    		#main {background-color: #000;}
-    	</style>
-		-->
-	<script src="test_missile_command.js"> </script>
+	<script src="missile_command.js"> </script>
 </head>
 
 <!-- HERE we add an explicit call to the draw() function -->
 <body onload="init()">
+<canvas id="text" width="700" height="630"></canvas>
+<canvas id="explosion" width="700" height="630"></canvas>
 <canvas id="main" width="700" height="630">
 Your browser does not support the canvas element.
 </canvas>

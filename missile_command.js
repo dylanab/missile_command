@@ -85,7 +85,7 @@ function init() {
 
     turret1 = new Turret(0 + 50, canvas_h - 40);
     turret2 = new Turret(canvas_w - 50, canvas_h - 40);
-    curr_turret = 1;
+    //curr_turret = 1;
 
     city1 = new City();
     city2 = new City();
@@ -628,6 +628,8 @@ function GameController() {
     //make everything alive again.
     turret1.alive = true;
     turret2.alive = true;
+    turret1.is_out = false;
+    turret2.is_out = false;
 
     //maybe make these alive again. 
     //I'll have to think about it.

@@ -12,9 +12,6 @@ var text_ctx;
 var canvas_w;
 var canvas_h;
 
-//var background;
-//var background_image;
-
 var missile;
 var missile_controller;
 var explosion_controller;
@@ -111,7 +108,6 @@ function init() {
 * If the player's turrets are able, launch a missile targeting that position.
 */ 
 function onClick(event) {
-    console.log("THIS IS HAPPENING!");
     var x = new Number();
     var y = new Number();
 

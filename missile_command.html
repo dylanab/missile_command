@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Missile Command! </title>
+	<title>Missile Command!</title>
 
 		<style>
 			canvas {
@@ -10,24 +10,20 @@
 				position: absolute;
 			}
 			#background {
-			  z-index: -5;
-			  background: lightblue;
+			  	z-index: -4;
+			  	background: lightblue;
 			}
 			#ground {
-				z-index: -4;
+				z-index: -3;
 				background: url('ground.png');
 			}
 			#cities {
-			  z-index: -3;
-			  background: transparent;
+			  	z-index: -2;
+			  	background: transparent;
 			}
 			#main{
-			  z-index: -2;
-			  background: transparent;
-			}
-			#explosion {
-				z-index: -1;
-				background: transparent;
+			  	z-index: -1;
+			  	background: transparent;
 			}
 			#text {
 				z-index: 0;
@@ -36,14 +32,9 @@
 		</style>
 	<script src="missile_command.js"> </script>
 </head>
-
-<!-- HERE we add an explicit call to the draw() function -->
 <body onload="init()">
 <canvas id="text" width="700" height="630"></canvas>
-<canvas id="explosion" width="700" height="630"></canvas>
-<canvas id="main" width="700" height="630">
-Your browser does not support the canvas element.
-</canvas>
+<canvas id="main" width="700" height="630"></canvas>
 <canvas id="cities" width="700" height="630"></canvas>
 <canvas id="ground" width="700" height="630"></canvas>
 <canvas id="background" width="700" height="630"></canvas>
